@@ -1,5 +1,17 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<MyClassicComponent @someValue={{22}} />
+{{!-- <MyComponent @someValue={{22}} /> --}}
+{{!--
+  Fails with:
 
-{{outlet}}
+    Uncaught (in promise) Error: Assertion Failed: you must pass a path to {{set}} index.js:172
+      at Object.assert (index.js:172)
+      at set (set.js:11)
+      at index.js:2981
+      at deprecateMutationsInAutotrackingTransaction (validator.js:149)
+      at EmberHelperRootReference.fnWrapper [as fn] (index.js:2980)
+      at reference.js:250
+      at runInAutotrackingTransaction (validator.js:121)
+      at track (validator.js:774)
+      at EmberHelperRootReference.compute (reference.js:249)
+      at new HelperRootReference (reference.js:223)
+--}}
